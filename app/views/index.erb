@@ -1,0 +1,9 @@
+
+<% if @message %>
+<h3>"<%= "#{@message}" %> was deleted"</h3>
+<% end %>
+<h1>Blog Posts</h1>
+<% @posts.each do |post| %>
+  <h2><%= post.name %></h2>
+  <p><%= post.content %></p>
+<% end %>

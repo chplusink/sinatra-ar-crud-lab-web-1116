@@ -1,0 +1,10 @@
+<h1>Edit Blog Post</h1>
+<form action="/posts/<%= @post.id %>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="patch">
+  <!-- Above line allows use of PATCH, with 'use Rack::MethodOverride' in config.ru -->
+  <label>Post Name</label>
+  <input type="text" name="name" value="<%= @post.name %>">
+  <label>Content</label>
+  <input type="text" name="content" value="<%= @post.content %>">
+  <input type="submit" id="submit" value="submit">
+</form>
